@@ -12,6 +12,8 @@ namespace vl.Controllers
         public ActionResult Index()
         {
             return View();
+            Console.WriteLine("as");
+
         }
     }
 }

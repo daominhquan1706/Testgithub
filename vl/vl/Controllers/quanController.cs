@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace vl.Controllers
 {
-    public class LongController : Controller
+    public class quanController : Controller
     {
-        // GET: Long
+        // GET: quan
         public ActionResult Index()
         {
             return View();
