@@ -273,10 +273,13 @@
     <Folder Include="Views\giaodien\" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Folder Include="Views\quan\" />
 =======
     <Folder Include="Views\Long\" />
 >>>>>>> cdd7f7c04bface61310d48719ab26f10df4c5bbd
+=======
+>>>>>>> parent of cdd7f7c... Long CTL
 =======
 >>>>>>> parent of cdd7f7c... Long CTL
   </ItemGroup>
