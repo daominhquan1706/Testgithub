@@ -197,7 +197,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\giaodienController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LongController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\quanController.cs" />
     <Compile Include="Global.asax.cs">
@@ -273,10 +272,13 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\giaodien\" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Folder Include="Views\quan\" />
 =======
     <Folder Include="Views\Long\" />
 >>>>>>> cdd7f7c04bface61310d48719ab26f10df4c5bbd
+=======
+>>>>>>> parent of cdd7f7c... Long CTL
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
