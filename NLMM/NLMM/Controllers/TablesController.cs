@@ -12,12 +12,12 @@ namespace NLMM.Controllers
 {
     public class TablesController : Controller
     {
-        private Database1Entities db = new Database1Entities();
+        private Database1Entities1 db = new Database1Entities1();
 
         // GET: Tables
         public ActionResult Index()
         {
-            return View(db.Tables.ToList());
+            return View(db.Table.ToList());
         }
 
         // GET: Tables/Details/5
@@ -27,7 +27,7 @@ namespace NLMM.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
+            Table table = db.Table.Find(id);
             if (table == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace NLMM.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Tables.Add(table);
+                db.Table.Add(table);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace NLMM.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
+            Table table = db.Table.Find(id);
             if (table == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace NLMM.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
+            Table table = db.Table.Find(id);
             if (table == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace NLMM.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Table table = db.Tables.Find(id);
-            db.Tables.Remove(table);
+            Table table = db.Table.Find(id);
+            db.Table.Remove(table);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
