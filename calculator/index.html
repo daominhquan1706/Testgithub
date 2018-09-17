@@ -5,23 +5,32 @@
 <style>
 #clear
 {
-
-width:130px;
+width:170px;
 }
 .formstyle
 {
-width:130px;
+width:170px;
 height:261px;
 margin:auto;
 border:2px solid blue;
 } 
 input
 {
-width:40px;
+width:23%;
 background-color:pink;
 }
-#answerstyle
-{width:126px;}
+#answer
+{width:166px;
+text-align:right}
+.cong {
+	padding-bottom:40px;
+	width:40px;
+	position:fixed;
+}
+.khong {
+	padding-right:72px;
+	width:40px;
+}
 </style>
   
 </head>
@@ -31,38 +40,54 @@ background-color:pink;
 <div class ="formstyle">
   <form name = "forms">
   
-  <input type = "text" name ="answer" id="answerstyle"><br></br>
-  <input type ="button"  value ="9" onclick = "forms.answer.value += '9' ">
-   <input type ="button"  value ="8" onclick = "forms.answer.value += '8' ">
-    <input type ="button"  value ="7" onclick = "forms.answer.value += '7' ">
-	<br></br> 
-	
+  
+  <input id="answer" type = "text" name ="answer" ><br></br>
+  <input id="" type ="button"  value ="C" onclick = "forms.answer.value = ' ' ">
+  <input id="chia" type ="button"  value ="/" onclick = "forms.answer.value += '/' ">
+  <input id="nhan" type ="button"  value ="*" onclick = "forms.answer.value += '*' ">
+  <input id="tru" type ="button"  value ="-" onclick = "forms.answer.value += '-' ">
+  <br></br> 
+	<input type ="button"  value ="7" onclick = "forms.answer.value += '7' ">
+	<input type ="button"  value ="8" onclick = "forms.answer.value += '8' ">	
+	<input type ="button"  value ="9" onclick = "forms.answer.value += '9' ">
+	<input id="cong" class="cong" type ="button"  value ="+" onclick = "forms.answer.value += '+';disabled()">
+		<br></br> 
+	<input type ="button"  value ="4" onclick = "forms.answer.value += '4' ">
+	<input type ="button"  value ="5" onclick = "forms.answer.value += '5' ">
 	<input type ="button"  value ="6" onclick = "forms.answer.value += '6' ">
-   <input type ="button"  value ="5" onclick = "forms.answer.value += '5' ">
-    <input type ="button"  value ="4" onclick = "forms.answer.value += '4' ">
-	<br></br>
-	
+		<br></br>
+	<input type ="button"  value ="1" onclick = "forms.answer.value += '1' ">
+	<input type ="button"  value ="2" onclick = "forms.answer.value += '2' ">
 	<input type ="button"  value ="3" onclick = "forms.answer.value += '3' ">
-   <input type ="button"  value ="2" onclick = "forms.answer.value += '2' ">
-    <input type ="button"  value ="1" onclick = "forms.answer.value += '1' ">
+	<input id="bang" class="cong" type ="button"  value ="=" onclick = "forms.answer.value =eval(forms.answer.value) ">
+		<br></br>
+   <input class="khong" type ="button"  value ="0" onclick = "forms.answer.value += '0' ">
+   <input  type ="button"  value ="." onclick = "forms.answer.value += '.' ">
 	
 	<br></br>
 	
-	<input type ="button"  value ="+" onclick = "forms.answer.value += '+' ">
-   <input type ="button"  value ="-" onclick = "forms.answer.value += '-' ">
-    <input type ="button"  value ="*" onclick = "forms.answer.value += '*' ">
-	<br></br>
 	
-	<input type ="button"  value ="/" onclick = "forms.answer.value += '/' ">
-   <input type ="button"  value ="0" onclick = "forms.answer.value += '0' ">
-    <input type ="button"  value ="=" onclick = "forms.answer.value =eval(forms.answer.value) ">
-	
-	<br></br>
-	
-	<input type ="button"  value ="clear all" onclick = "forms.answer.value = ' ' " id="clear">
 </form>
   
 
 </body>
-
+<script>
+	function disabled() {
+	var text = document.getElementById("answer").value;
+    if(text[text.length -1]=="+" &&text[text.length -1]=="-"&&text[text.length -1]=="*" &&text[text.length -1]=="/" ){
+	document.getElementById("cong").disabled = true;
+	document.getElementById("tru").disabled = true;
+	document.getElementById("nhan").disabled = true;
+	document.getElementById("chia").disabled = true;
+	document.getElementById("bang").disabled = true;
+	}
+	else{
+	document.getElementById("cong").disabled = false;
+	document.getElementById("tru").disabled = false;
+	document.getElementById("nhan").disabled = false;
+	document.getElementById("chia").disabled = false;
+	document.getElementById("bang").disabled = false;
+	}
+}
+</script>
 </html>
